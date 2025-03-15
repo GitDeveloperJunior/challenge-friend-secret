@@ -1,9 +1,14 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-function agregarAmigo(){
-    let amigos = [];
+let amigos = [];
+let listaNombres =[];
+function agregarAmigo()
+{
+   // 2) creamos el nuevo elemento
     let nuevoNombre = document.createElement("li");
-    let listaNombres = document.getElementById("listaAmigos");
+    // 1) seleccionamos la lista por su Id listaAmigos
+    listaNombres = document.getElementById("listaAmigos");
     let nombreMostrado = document.getElementById("amigo");
+    let elementos = listaNombres.getElementsByTagName("li");
 
     const nombreInput = document.getElementById("amigo");
     const nombre = nombreInput.value.trim();
@@ -11,27 +16,71 @@ function agregarAmigo(){
 
     if (nombre === "") {
         alert("Por Favor, ingrese un nombre válido");
-      /*  const li = document.createElement("li");
-        li.textContent = "No se puede agregar un nombre vacío.";
-        lista.appendChild(li);*/
-    } 
-    else { 
-    amigos = document.getElementById('amigo').value;
- // console.log(amigos);
- 
- nuevoNombre.textContent = amigos;
- //       amigos.innerHTML =`${amigos[0]}`;
- 
- 
- listaNombres.appendChild(nuevoNombre);
+                        } 
+    else    { 
+      //  listaNombres.innerHTML = "";
+        amigos = document.getElementById('amigo').value;
+    
+        for (let A=0; A<amigos.length; A++){
+           //3) al nuevo elemento creado asigno lo que deseo guardar 
+           nuevoNombre.textContent = amigos;
+           // 4) agrego a la lista que cree guardo el valor que asigne
+        
+           listaNombres.appendChild(nuevoNombre);
+            //nombreMostrado.textContent = amigos;
+            /*for (let i = 0; i < elementos.length; i++) {
+                console.log(elementos[i].textContent);
+              
+            }*/
+            
+                document.getElementById("amigo").value= " ";
+
+            //console.log(amigos[A]);
+            console.log(listaNombres);
+            
+
+                               }
+        console.log(amigos);
 
 
- nombreMostrado.textContent = amigos;
- document.getElementById("amigo").value= " ";
 
-return console.log("esta funcionando la funcion");
-         }
+
+        
+        // console.log(amigos);
+ 
+       
+        //       amigos.innerHTML =`${amigos[0]}`;
+ 
+    
+    
+  
+
+
+    //let valor = listaNombres.length;
+    //console.log(`${valor}`);
+//for (let i = 0; i < elementos.length; i++) {
+ //   console.log(elementos[i].textContent);
+  
+//}
+ 
+                                }
+
+        return console.log("esta funcionando la funcion");
 }
 
+
 //let botonAgregar = document.getElementById("amigo");
-//botonAgregar.addEventListener("click", agregarNombre);
+// //botonAgregar.addEventListener("click", agregarNombre);
+
+function sortearAmigo(){
+ //console.log(amigos[A]);
+ let lista = document.getElementById("listaAmigos").value;
+let nuevoElemento = document.createElement("li");
+
+//nuevoElemento.textContent = lista;
+//lista.appendChild(nuevoElemento);
+//console.log (`${lista}`);
+
+
+                         }
+                           
