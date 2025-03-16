@@ -18,22 +18,24 @@ function agregarAmigo()
         alert("Por Favor, ingrese un nombre válido");
                         } 
     else    { 
-      //  listaNombres.innerHTML = "";
-        amigos = document.getElementById('amigo').value;
-    
-        for (let A=0; A<amigos.length; A++){
+      
+      let   amigoIngreso = document.getElementById('amigo').value;
+      amigos.push(amigoIngreso);
+        document.getElementById('amigo').value ='';
+        listaNombres.innerHTML = "";
+       amigos.forEach(function(friend){
+            let li = document.createElement('li');
+            li.textContent = friend;
+            listaNombres.appendChild(li);
+                                    }); 
            //3) al nuevo elemento creado asigno lo que deseo guardar 
-           nuevoNombre.textContent = amigos;
+           //nuevoNombre.textContent = amigos;
            // 4) agrego a la lista que cree guardo el valor que asigne
         
-           listaNombres.appendChild(nuevoNombre);
-            //nombreMostrado.textContent = amigos;
-            /*for (let i = 0; i < elementos.length; i++) {
-                console.log(elementos[i].textContent);
-              
-            }*/
+           //listaNombres.appendChild(nuevoNombre);
+           
             
-                document.getElementById("amigo").value= " ";
+             //   document.getElementById("amigo").value= " ";
 
             //console.log(amigos[A]);
             console.log(listaNombres);
@@ -65,8 +67,8 @@ function agregarAmigo()
  
                                 }
 
-        return console.log("esta funcionando la funcion");
-}
+        //return console.log("esta funcionando la funcion");
+//}
 
 
 //let botonAgregar = document.getElementById("amigo");
