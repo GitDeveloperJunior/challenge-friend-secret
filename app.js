@@ -79,6 +79,14 @@ function sortearAmigo(){
  let lista = document.getElementById("listaAmigos").value;
 let nuevoElemento = document.createElement("li");
 
+
+if (amigos.length>0){
+
+let indice = Math.floor(Math.random()*amigos.length);
+console.log(amigos[indice]);
+
+
+} else alert("La lista de amigos esta vacía");
 //nuevoElemento.textContent = lista;
 //lista.appendChild(nuevoElemento);
 //console.log (`${lista}`);
