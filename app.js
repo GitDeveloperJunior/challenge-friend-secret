@@ -83,6 +83,9 @@ let nuevoElemento = document.createElement("li");
 if (amigos.length>0){
 
 let indice = Math.floor(Math.random()*amigos.length);
+let mostrar = document.getElementById("resultado"); //a) selecciono en donde quiero desplegar el texto
+listaNombres.innerHTML = "";
+mostrar.textContent = `El nombre sorteado es "${amigos[indice]}"`; // b) despliego el texto donde seleccione anteriormente
 console.log(amigos[indice]);
 
 
